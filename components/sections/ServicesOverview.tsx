@@ -67,7 +67,7 @@ export default function ServicesOverview() {
 
       {/* Section Header */}
       <div style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }} className="services-header">
-        <p style={{ fontSize: "12px", fontWeight: "700", color: "#F5A623", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "12px" }}>
+        <p style={{ fontSize: "20px", fontWeight: "700", color: "#F5A623", letterSpacing: "3px", textTransform: "uppercase", marginBottom: "12px" }}>
           What We Do
         </p>
         <h2 style={{

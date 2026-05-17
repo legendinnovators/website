@@ -275,7 +275,7 @@ export default function AboutPage() {
         /* ── Section shared ── */
         .about-section { padding: 80px 0; border-top: 1px solid #E5E7EB; }
         .about-section-tag {
-          font-size: 11px;
+          font-size: 20px;
           font-weight: 700;
           color: #F5A623;
           letter-spacing: 3px;

@@ -266,7 +266,7 @@ export default function LiconPage() {
         /* Section shared */
         .licon-section { padding: 80px 0; border-top: 1px solid #E5E7EB; }
         .licon-section-tag {
-          font-size: 11px; font-weight: 700; color: #F5A623;
+          font-size: 20px; font-weight: 700; color: #F5A623;
           letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px;
         }
         .licon-tag-light { color: #F5A623; }

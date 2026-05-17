@@ -69,7 +69,7 @@ export default function PhilosophyPage() {
                     className="give-header-margin"
                     >
                         <p style={{
-                            fontSize: "11px",
+                            fontSize: "20px",
                             fontWeight: "700",
                             color: "#F5A623",
                             letterSpacing: "3px",
@@ -175,7 +175,7 @@ export default function PhilosophyPage() {
                 {/* Header */}
                 <div style={{ textAlign: "center", marginBottom: "40px" }}>
                     <p style={{
-                        fontSize: "11px",
+                        fontSize: "20px",
                         fontWeight: "700",
                         color: "#F5A623",
                         letterSpacing: "3px",

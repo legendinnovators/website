@@ -235,7 +235,7 @@ export default function BusinessAdvisoryPage() {
         .sp-btn-secondary { display: inline-flex; align-items: center; background: transparent; color: white; padding: 14px 28px; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; border: 2px solid rgba(255,255,255,0.4); }
         .sp-btn-secondary:hover { border-color: white; }
         .sp-section { padding: 80px 0; border-top: 1px solid #E5E7EB; }
-        .sp-section-tag { font-size: 11px; font-weight: 700; color: #F5A623; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+        .sp-section-tag { font-size: 15px; font-weight: 700; color: #F5A623; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
         .sp-section-title { font-size: clamp(24px, 2.5vw, 36px); font-weight: 800; color: #1B2A6B; margin-bottom: 16px; font-family: var(--font-playfair); }
         .sp-section-desc { font-size: 15px; color: #6B7280; line-height: 1.7; max-width: 640px; margin-bottom: 40px; }
         .sp-offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }

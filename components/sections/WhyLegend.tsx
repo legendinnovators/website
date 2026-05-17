@@ -15,7 +15,7 @@ export default function WhyLegend() {
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <p style={{
-            fontSize: "11px",
+            fontSize: "20px",
             fontWeight: "700",
             color: "#F5A623",
             letterSpacing: "3px",

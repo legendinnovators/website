@@ -27,7 +27,7 @@ export default function CTABanner() {
         {/* Content */}
         <div style={{ position: "relative" }}>
           <p style={{
-            fontSize: "11px",
+            fontSize: "20px",
             fontWeight: "700",
             color: "rgba(255,255,255,0.7)",
             letterSpacing: "3px",

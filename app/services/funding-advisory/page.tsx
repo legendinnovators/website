@@ -313,7 +313,7 @@ export default function FundingAdvisoryPage() {
         /* ── Section shared ── */
         .sp-section { padding: 80px 0; border-top: 1px solid #E5E7EB; }
         .sp-section-tag {
-          font-size: 11px;
+          font-size: 15px;
           font-weight: 700;
           color: #F5A623;
           letter-spacing: 3px;

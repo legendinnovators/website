@@ -232,7 +232,7 @@ export default function Testimonials() {
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: "28px", position: "relative" }} className="testimonials-header">
             <p style={{
-              fontSize: "11px",
+              fontSize: "20px",
               fontWeight: "700",
               color: "#F5A623",
               letterSpacing: "3px",
