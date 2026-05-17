@@ -242,7 +242,9 @@ export default function Navbar() {
             <div style={{ borderTop: "1px solid #fde9d5", margin: "10px 0" }} />
 
             <Link
-              href="/contact"
+              href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMobile}
               style={{
                 display: "flex",
