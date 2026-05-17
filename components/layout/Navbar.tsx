@@ -108,7 +108,9 @@ export default function Navbar() {
 
           {/* CTA Button — UNCHANGED */}
           <Link
-            href="/contact"
+            href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden lg:inline-block text-white font-medium text-sm transition-opacity hover:opacity-90 whitespace-nowrap"
             style={{
               background: "linear-gradient(to right, #F5A623, #C17F24)",

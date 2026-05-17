@@ -168,7 +168,9 @@ export default function Footer() {
                                 </div>
                             ))}
                             <Link
-                                href="/contact"
+                                href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 style={{
                                     display: "inline-flex",
                                     alignItems: "center",
@@ -277,7 +279,9 @@ export default function Footer() {
                         ))}
                         <div style={{ display: "flex", justifyContent: "center" }}></div>
                         <Link
-                            href="/contact"
+                            href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             style={{
                                 display: "inline-flex",
                                 alignItems: "center",
