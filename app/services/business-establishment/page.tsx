@@ -82,7 +82,7 @@ export default function BusinessEstablishmentPage() {
               Launch Your Business Smoothly
             </Link>
             <a href="#process" className="sp-btn-secondary">
-              See All Services
+              Explore our Services
             </a>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function BusinessEstablishmentPage() {
       <section className="sp-section sp-gray">
         <div className="sp-container">
           <p className="sp-section-tag">Who It's For</p>
-          <h2 className="sp-section-title">Is This Right for You?</h2>
+          <h2 className="sp-section-title">It's Right for You?</h2>
           <div className="sp-who-grid">
             {whoFor.map((item) => (
               <div key={item} className="sp-who-card">
@@ -178,7 +178,7 @@ export default function BusinessEstablishmentPage() {
                 Legend Innovators handled our Private Limited company registration and trademark filing seamlessly. We were operational in record time.
               </p>
               <div className="sp-quote-divider" />
-              <div className="sp-quote-author">Founder, HealthTech Startup, Delhi</div>
+              <div className="sp-quote-author">Founder, Zenious Engineering & Consultants</div>
             </div>
           </div>
         </div>

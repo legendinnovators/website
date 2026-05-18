@@ -87,7 +87,7 @@ export default function BusinessAdvisoryPage() {
               Get Strategic Guidance Now
             </Link>
             <a href="#process" className="sp-btn-secondary">
-              Discover Our Expertise
+              Discover Our Process
             </a>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function BusinessAdvisoryPage() {
                 Legend Innovators transformed our operations and helped us achieve 40% efficiency gains within six months.
               </p>
               <div className="sp-quote-divider" />
-              <div className="sp-quote-author">Director, Manufacturing Firm, Mumbai</div>
+              <div className="sp-quote-author">Founder, Srinav Ventures</div>
             </div>
           </div>
         </div>
@@ -200,8 +200,10 @@ export default function BusinessAdvisoryPage() {
                 Ready for ethical, sustainable growth? Book your free consultation and let us help you innovate, elevate, and succeed.
               </p>
               <div className="sp-cta-buttons">
-                <Link href="/contact" className="sp-cta-btn-primary">
-                  Book Appointment →
+                <Link href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+                                target="_blank"
+                                rel="noopener noreferrer" className="sp-cta-btn-primary">
+                  Book Consultation →
                 </Link>
                 <Link href="/dashboard" className="sp-cta-btn-secondary">
                   Explore Advisory Packages

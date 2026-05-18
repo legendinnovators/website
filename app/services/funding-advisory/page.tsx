@@ -73,7 +73,7 @@ export default function FundingAdvisoryPage() {
           </p>
           <div className="sp-hero-btns">
             <Link href="/contact" className="sp-btn-primary">
-              Book Free Funding Consultation Now
+              Book Funding Consultation Now
             </Link>
             <a href="#process" className="sp-btn-secondary">
               Explore Our Process
@@ -169,10 +169,11 @@ export default function FundingAdvisoryPage() {
               <p className="sp-section-tag">Client Success Story</p>
               <div className="sp-quote-mark">"</div>
               <p className="sp-quote-text">
-                Legend Innovators helped us secure ₹2.8 Cr in bank funding within 45 days. Their team made the entire process smooth and stress-free.
+                Legend Innovators helped us secure ₹5 Cr in bank funding within 45 days. Their team made the entire process smooth and stress-free.
+
               </p>
               <div className="sp-quote-divider" />
-              <div className="sp-quote-author">Founder, Tech Startup, Kolkata</div>
+              <div className="sp-quote-author">Founder, Bhavarsai Ventures Pvt. Ltd.</div>
             </div>
           </div>
         </div>
@@ -193,7 +194,7 @@ export default function FundingAdvisoryPage() {
                   Book Appointment Now →
                 </Link>
                 <Link href="/dashboard" className="sp-cta-btn-secondary">
-                  Purchase Funding Advisory Package
+                  Subscribe to Funding Advisory Services
                 </Link>
               </div>
             </div>

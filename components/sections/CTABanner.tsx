@@ -72,7 +72,7 @@ export default function CTABanner() {
                 textDecoration: "none",
               }}
             >
-              Book Free Consultation →
+              Book Consultation →
             </Link>
             <Link
               href="/services"

@@ -1,8 +1,8 @@
 "use client";
 
 const results = [
-  { number: "₹2.8 Cr", label: "Bank loan secured in 45 days", client: "Tech Startup, Kolkata" },
-  { number: "40%", label: "Efficiency gains in 6 months", client: "Manufacturing Firm, Mumbai" },
+  { number: "₹5.0 Cr", label: "Bank loan secured in 45 days.", client: "Service Organization, Odisha" },
+  { number: "3X", label: "Turnover increased in 6 months. ", client: " Healthcare Organization "},
 ];
 
 export default function WhyLegend() {
@@ -63,12 +63,12 @@ export default function WhyLegend() {
                 India's Most Trusted Business Advisory Partner
               </h3>
               <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", lineHeight: "1.7", margin: 0 }}>
-                Empowering 150+ businesses with ethical, sustainable and results-driven advisory.
+                Empowering 300+ businesses with ethical, sustainable and results-driven advisory.
               </p>
             </div>
             <div>
               <div style={{ fontSize: "52px", fontWeight: "900", color: "#F5A623", lineHeight: "1", marginBottom: "4px" }}>
-                150+
+                300+
               </div>
               <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)" }}>
                 Businesses served across India
@@ -163,12 +163,12 @@ export default function WhyLegend() {
                 India's Most Trusted Business Advisory Partner
               </h3>
               <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", lineHeight: "1.7", margin: 0 }}>
-                Empowering 150+ businesses with ethical, sustainable and results-driven advisory.
+                Empowering 300+ businesses with ethical, sustainable and results-driven advisory.
               </p>
             </div>
             <div>
               <div style={{ fontSize: "48px", fontWeight: "900", color: "#F5A623", lineHeight: "1", marginBottom: "4px" }}>
-                150+
+                300+
               </div>
               <div style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)" }}>
                 Businesses served across India

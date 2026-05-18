@@ -162,7 +162,7 @@ export default function Footer() {
                             <div style={{ fontSize: "11px", fontWeight: "700", color: "#F5A623", letterSpacing: "2px", marginBottom: "16px" }}>
                                 GET IN TOUCH
                             </div>
-                            {["info@legendinnovators.com", "+91 986-109-8610", "Bhubaneswar, Odisha, India"].map((item) => (
+                            {["info@legendinnovators.com", "+91-919-919-2055", "Bhubaneswar, Odisha, India"].map((item) => (
                                 <div key={item} style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", marginBottom: "10px" }}>
                                     {item}
                                 </div>
@@ -272,7 +272,7 @@ export default function Footer() {
                         <div style={{ fontSize: "10px", fontWeight: "700", color: "#F5A623", letterSpacing: "2px", marginBottom: "14px" }}>
                             GET IN TOUCH
                         </div>
-                        {["info@legendinnovators.com", "+91 986-109-8610", "Bhubaneswar, Odisha, India"].map((item) => (
+                        {["info@legendinnovators.com", "+91-919-919-2055", "Bhubaneswar, Odisha, India"].map((item) => (
                             <div key={item} style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)", marginBottom: "8px" }}>
                                 {item}
                             </div>

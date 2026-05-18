@@ -80,7 +80,7 @@ export default function VirtualCFOPage() {
               Get Your Virtual CFO Today
             </Link>
             <a href="#process" className="sp-btn-secondary">
-              See What's Included
+              Explore Our Approach
             </a>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function VirtualCFOPage() {
                 Thanks to Legend Innovators' Virtual CFO, we improved our cash flow visibility and successfully raised our next funding round.
               </p>
               <div className="sp-quote-divider" />
-              <div className="sp-quote-author">CEO, E-commerce SME, Mumbai</div>
+              <div className="sp-quote-author">Founder, Tribe Delight Pvt. Ltd.</div>
             </div>
           </div>
         </div>
@@ -193,11 +193,13 @@ export default function VirtualCFOPage() {
                 Book a free consultation today and experience professional financial leadership tailored to your business needs.
               </p>
               <div className="sp-cta-buttons">
-                <Link href="/contact" className="sp-cta-btn-primary">
-                  Book Free Consultation →
+                <Link href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+                                target="_blank"
+                                rel="noopener noreferrer" className="sp-cta-btn-primary">
+                  Book Consultation →
                 </Link>
                 <Link href="/dashboard" className="sp-cta-btn-secondary">
-                  Subscribe to Virtual CFO Retainer
+                  Subscribe to Virtual CFO Services
                 </Link>
               </div>
             </div>

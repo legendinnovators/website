@@ -74,7 +74,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="contact-info-label">Phone</div>
-                    <div className="contact-info-value">+91 986-109-8610</div>
+                    <div className="contact-info-value">+91-919-919-2055</div>
                   </div>
                 </div>
                 <div className="contact-info-item">
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="contact-info-label">Email</div>
-                    <div className="contact-info-value">info@legendinnovators.com</div>
+                    <div className="contact-info-value">connect@legendinnovators.com</div>
                   </div>
                 </div>
                 <div className="contact-info-item">

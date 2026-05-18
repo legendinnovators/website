@@ -19,7 +19,7 @@ const navLinks = [
       { label: "Business Establishment", href: "/services/business-establishment" },
     ],
   },
-  { label: "LICON Consortium", href: "/licon-consortium" },
+  { label: "LICON", href: "/licon-consortium" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ];
@@ -118,7 +118,7 @@ export default function Navbar() {
               borderRadius: "999px",
             }}
           >
-            Book Free Consultation
+            Book Consultation
           </Link>
 
           {/* Mobile Hamburger */}
@@ -259,7 +259,7 @@ export default function Navbar() {
                 textDecoration: "none",
               }}
             >
-              Book Free Consultation
+              Book Consultation
             </Link>
 
             <p style={{ textAlign: "center", fontSize: "11px", color: "#bbb", paddingTop: "8px" }}>

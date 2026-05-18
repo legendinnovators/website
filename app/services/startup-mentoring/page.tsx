@@ -55,7 +55,7 @@ export default function StartupMentoringPage() {
               Start Your Elevation Journey
             </Link>
             <a href="#steps" className="sp-btn-secondary">
-              View the 10 Steps
+              Explore Our 10 Steps
             </a>
           </div>
         </div>
@@ -151,10 +151,10 @@ export default function StartupMentoringPage() {
               <p className="sp-section-tag">Client Success Story</p>
               <div className="sp-quote-mark">"</div>
               <p className="sp-quote-text">
-                Our startup went from concept to first paying customers in just 4 months with Legend Innovators' mentoring program.
+                They are exceptional. They have a deep understanding of our industry and our customers, and they always go the extra mile to ensure our success.
               </p>
               <div className="sp-quote-divider" />
-              <div className="sp-quote-author">Founder, Fintech Startup, Bangalore</div>
+              <div className="sp-quote-author">Founder, IndusLives, Startup</div>
             </div>
           </div>
         </div>
@@ -171,11 +171,13 @@ export default function StartupMentoringPage() {
                 Don't navigate the startup journey alone. Book a free discovery call today and take the first step toward building something extraordinary.
               </p>
               <div className="sp-cta-buttons">
-                <Link href="/dashboard" className="sp-cta-btn-primary">
-                  Enroll in the 10-Step Program →
+                <Link href="https://outlook.office.com/book/LegendInnovators@sktspeaking.com/?ismsaljsauthenabled"
+                                target="_blank"
+                                rel="noopener noreferrer" className="sp-cta-btn-primary">
+                  Book Consultation
                 </Link>
                 <Link href="/contact" className="sp-cta-btn-secondary">
-                  Book Free Mentoring Consultation
+                  Enroll in Startup Elevation Program
                 </Link>
               </div>
             </div>

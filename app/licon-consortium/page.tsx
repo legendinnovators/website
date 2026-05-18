@@ -24,7 +24,7 @@ const process = [
 ];
 
 const stats = [
-  { value: "150+", label: "Member Startups" },
+  { value: "300+", label: "Member Startups" },
   { value: "Pan-India", label: "Coverage" },
   { value: "100%", label: "Ethical Network" },
 ];
@@ -41,8 +41,8 @@ export default function LiconPage() {
           <div className="licon-logo-wrap">
             <img
               src="/licon/licon-logo.png"
-              alt="LICON Consortium"
-              className="licon-logo-img"
+              alt="LICON"
+              className="licon-dark-img"
             />
           </div>
           <p className="licon-eyebrow">Legend Innovators Consortium</p>
@@ -181,7 +181,7 @@ export default function LiconPage() {
         /* Hero */
         .licon-hero {
           background: #1B2A6B;
-          padding: 100px 0 80px;
+          padding: 60px 0 40px;
           position: relative;
           overflow: hidden;
           text-align: center;
@@ -201,14 +201,14 @@ export default function LiconPage() {
         }
         .licon-logo-wrap {
           display: flex; justify-content: center;
-          margin-bottom: 24px; position: relative;
+          margin-bottom: 8px; position: relative;
         }
         .licon-logo-img {
-          width: 240px; height: 240px;
+          width: 400px; height: 200px;
           object-fit: contain; border-radius: 0;
         }
         .licon-eyebrow {
-          font-size: 11px; font-weight: 700; color: #F5A623;
+          font-size: 20px; font-weight: 700; color: #F5A623;
           letter-spacing: 3px; text-transform: uppercase;
           margin-bottom: 16px; position: relative;
         }

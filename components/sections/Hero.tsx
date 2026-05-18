@@ -219,7 +219,7 @@ export default function Hero() {
           />
 
           <div style={{ position: "absolute", top: "2%", left: "70%", transform: "translateX(-50%)", background: "white", border: "1px solid #E5E7EB", borderRight: "3px solid #F5A623", borderRadius: "8px", padding: "8px 14px", zIndex: 4, boxShadow: "0 4px 16px rgba(0,0,0,0.08)", whiteSpace: "nowrap" }}>
-            <div style={{ fontSize: "15px", fontWeight: 800, color: "#1B2A6B" }}>150+</div>
+            <div style={{ fontSize: "15px", fontWeight: 800, color: "#1B2A6B" }}>300+</div>
             <div style={{ fontSize: "10px", color: "#6B7280" }}>Startups & SMEs</div>
           </div>
           <div style={{ position: "absolute", top: "35%", right: "3%", background: "white", border: "1px solid #E5E7EB", borderRight: "3px solid #F5A623", borderRadius: "8px", padding: "8px 14px", zIndex: 4, boxShadow: "0 4px 16px rgba(0,0,0,0.08)", whiteSpace: "nowrap" }}>

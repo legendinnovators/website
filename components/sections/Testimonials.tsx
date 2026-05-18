@@ -4,85 +4,28 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    image: "/testimonials/client-1.png",
-    initials: "RS",
-    quote: "Legend Innovators helped us secure ₹2.8 Cr in bank funding within 45 days. Their team made the entire process smooth and stress-free.",
-    name: "Rahul Sharma",
+    image: "/testimonials/dibyaranjan.png",
+    initials: "DR",
+    quote: "They are more than consultants, they are mentors. They guided us through every step of the process and taught us how to think differently and strategically.",
+    name: "Dibyaranjan Sahoo",
     designation: "Founder",
-    company: "Tech Startup, Kolkata",
+    company: "Vellow Motors",
   },
   {
-    image: "/testimonials/client-2.jpg",
-    initials: "PM",
-    quote: "Thanks to their Virtual CFO service, we improved cash flow visibility and successfully raised our next funding round.",
-    name: "Priya Mehta",
-    designation: "CEO",
-    company: "E-commerce SME, Mumbai",
+    image: "/testimonials/dina-krishna.png",
+    initials: "DK",
+    quote: "They have a unique blend of skills and experience that make them stand out from other consultants. They are always ready to offer fresh and practical solutions to our challenges.",
+    name: "Dina Krishna Mishra",
+    company:"Kalpabata Foundation",
   },
   {
-    image: "/testimonials/client-3.jpg",
-    initials: "AK",
-    quote: "Our startup went from concept to first paying customers in just 4 months with Legend Innovators' mentoring program.",
-    name: "Arjun Kumar",
-    designation: "Founder",
-    company: "Fintech Startup, Bangalore",
-  },
-  {
-    image: "/testimonials/client-4.jpg",
-    initials: "SK",
-    quote: "Legend Innovators transformed our operations and helped us achieve 40% efficiency gains within six months.",
-    name: "Suresh Kumar",
-    designation: "Director",
-    company: "Manufacturing Firm, Mumbai",
-  },
-  {
-    image: "/testimonials/client-5.jpg",
-    initials: "NP",
-    quote: "They handled our Private Limited registration and trademark filing seamlessly. We were operational in record time.",
-    name: "Neha Patel",
-    designation: "Founder",
-    company: "HealthTech Startup, Delhi",
-  },
-  {
-    image: "/testimonials/client-6.jpg",
-    initials: "VR",
-    quote: "The LICON network opened doors we never imagined. Truly a game changer for our business growth.",
-    name: "Vikram Rao",
-    designation: "Co-founder",
-    company: "EdTech Startup, Hyderabad",
-  },
-  {
-    image: "/testimonials/client-7.jpg",
-    initials: "AT",
-    quote: "Their ethical approach and deep expertise made them our long-term advisory partner. Highly recommended!",
-    name: "Anita Trivedi",
-    designation: "Managing Director",
-    company: "Retail Chain, Delhi",
-  },
-  {
-    image: "/testimonials/client-8.jpg",
-    initials: "RG",
-    quote: "Professional, responsive and result-oriented. Best investment we made for our startup journey.",
-    name: "Rohit Gupta",
-    designation: "Founder",
-    company: "AgriTech Startup, Pune",
-  },
-  {
-    image: "/testimonials/client-9.jpg",
+    image: "/testimonials/sundip.png",
     initials: "SM",
-    quote: "They understood our vision and helped us build a scalable model from day one. Incredible team!",
-    name: "Sunita Mishra",
-    designation: "CEO",
-    company: "Fashion Brand, Jaipur",
+    quote: "Legend Innovators are not just consultants, they are partners. We were impressed by their professionalism, creativity and dedication. They delivered beyond our expectations and made us feel valued and supported.",
+    name: "Sundip Mesra",
+    company: "Srinav Ventures",
   },
-  {
-    image: "/testimonials/client-10.jpg",
-    initials: "KS",
-    quote: "IPO readiness program was a game changer. We are now fully prepared for the next stage of growth.",
-    name: "Kiran Singh",
-    designation: "Founder",
-    company: "Logistics Startup, Chennai",
-  },
+    
 ];
 
 export default function Testimonials() {
@@ -248,7 +191,7 @@ export default function Testimonials() {
               margin: 0,
               fontFamily: "var(--font-playfair)",
             }}>
-              200+ Businesses Trust Us
+              300+ Businesses Trust Us
             </h3>
           </div>
 
@@ -274,7 +217,7 @@ export default function Testimonials() {
                   {t.name}
                 </div>
                 <div style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)", textAlign: "center" }}>
-                  {t.designation} · {t.company}
+                  {t.designation}{t.designation && t.company ? " · " : ""}{t.company}
                 </div>
               </div>
 

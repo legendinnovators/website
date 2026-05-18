@@ -60,7 +60,7 @@ const beliefs = [
 ];
 
 const stats = [
-  { value: "150+", label: "Businesses Served" },
+  { value: "300+", label: "Businesses Served" },
   { value: "98%", label: "Success Rate" },
   { value: "100%", label: "Ethical" },
 ];
