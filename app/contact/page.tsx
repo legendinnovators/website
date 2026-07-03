@@ -17,13 +17,11 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Form data
   const [formData, setFormData] = useState({
     name: "", company: "", phone: "", email: "",
     service: "", businessType: "", message: "",
   });
 
-  // OTP state
   const [phoneOtp, setPhoneOtp] = useState(["", "", "", "", "", ""]);
   const [emailOtp, setEmailOtp] = useState(["", "", "", "", "", ""]);
   const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult | null>(null);
@@ -35,7 +33,6 @@ export default function ContactPage() {
   const phoneRefs = useRef<(HTMLInputElement | null)[]>([]);
   const emailRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  // Resend countdown
   useEffect(() => {
     if (step !== "otp") return;
     if (resendTimer <= 0) return;
@@ -77,19 +74,15 @@ export default function ContactPage() {
     setLoading(true);
     setError("");
     try {
-      // Setup reCAPTCHA
       if (!window.recaptchaVerifier) {
         window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", {
           size: "invisible",
         });
       }
-
-      // Send phone OTP via Firebase
       const phone = "+91" + formData.phone.replace(/\D/g, "").slice(-10);
       const result = await signInWithPhoneNumber(auth, phone, window.recaptchaVerifier);
       setConfirmationResult(result);
 
-      // Send email OTP via our API
       const res = await fetch("/api/send-email-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -149,12 +142,10 @@ export default function ContactPage() {
         return;
       }
 
-      // Verify phone OTP via Firebase
       if (!confirmationResult) throw new Error("Phone verification session expired.");
       await confirmationResult.confirm(phoneFull);
       setPhoneVerified(true);
 
-      // Verify email OTP via our API
       const res = await fetch("/api/verify-email-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -164,7 +155,6 @@ export default function ContactPage() {
       if (!res.ok) throw new Error(data.error || "Email OTP verification failed.");
       setEmailVerified(true);
 
-      // Submit contact form
       const submitRes = await fetch("/api/submit-contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -184,7 +174,6 @@ export default function ContactPage() {
     <main className="contact-page">
       <div id="recaptcha-container" ref={recaptchaRef} />
 
-      {/* ── HERO ── */}
       <section className="contact-hero">
         <div className="contact-hero-grid" />
         <div className="contact-hero-glow" />
@@ -199,16 +188,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── MAIN SECTION ── */}
       <section className="contact-main-section">
         <div className="contact-container">
           <div className="contact-grid">
 
-            {/* ── FORM SIDE ── */}
             <div className="contact-form-side">
               <p className="contact-section-tag">Book a Consultation</p>
               <h2 className="contact-section-title">Get in Touch</h2>
-
               <div className="contact-form">
                 <div className="contact-field">
                   <label className="contact-label">Full Name *</label>
@@ -249,11 +235,9 @@ export default function ContactPage() {
                   <label className="contact-label">Message *</label>
                   <textarea name="message" className="contact-textarea" placeholder="Tell us about your business and how we can help..." value={formData.message} onChange={handleFormChange} />
                 </div>
-
                 {error && step === "form" && (
                   <p style={{ color: "#DC2626", fontSize: "13px", marginTop: "-8px" }}>{error}</p>
                 )}
-
                 <button className="contact-submit-btn" onClick={handleContinue}>
                   Get Expert Consultation
                 </button>
@@ -263,7 +247,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* ── INFO SIDE ── */}
             <div className="contact-info-side">
               <p className="contact-section-tag">Our Details</p>
               <h2 className="contact-section-title">Contact Info</h2>
@@ -331,7 +314,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── BOOKING SECTION ── */}
       <section className="contact-booking-section">
         <div className="contact-booking-grid" />
         <div className="contact-booking-glow" />
@@ -355,7 +337,6 @@ export default function ContactPage() {
         <div className="otp-overlay">
           <div className="otp-modal">
 
-            {/* Step: Confirm details */}
             {step === "modal" && (
               <>
                 <div className="otp-modal-header">
@@ -389,9 +370,10 @@ export default function ContactPage() {
               </>
             )}
 
-            {/* Step: Enter OTPs */}
             {step === "otp" && (
               <>
+                <button className="otp-close-btn" onClick={() => { setStep("form"); setError(""); setPhoneOtp(["","","","","",""]); setEmailOtp(["","","","","",""]); }}>✕</button>
+
                 <div className="otp-modal-header">
                   <h3 className="otp-modal-title">Enter Verification Codes</h3>
                   <p className="otp-modal-sub">Both codes sent simultaneously.</p>
@@ -399,7 +381,9 @@ export default function ContactPage() {
 
                 {/* Phone OTP */}
                 <div className="otp-section">
-                  <p className="otp-section-label">📱 Mobile Code</p>
+                  <div className="otp-section-top">
+                    <p className="otp-section-label">📱 Mobile Code</p>
+                  </div>
                   <p className="otp-section-sent">Sent to {maskPhone(formData.phone)}</p>
                   <div className="otp-boxes">
                     {phoneOtp.map((val, i) => (
@@ -414,6 +398,15 @@ export default function ContactPage() {
                         onKeyDown={e => handleOtpKeyDown(e, i, phoneRefs)}
                       />
                     ))}
+                  </div>
+                  <div className="otp-bottom-row">
+                    <span className="otp-resend">
+                      {resendTimer > 0
+                        ? `Resend in 00:${String(resendTimer).padStart(2, "0")}`
+                        : <span className="otp-resend-link" onClick={handleResend}>Resend</span>
+                      }
+                    </span>
+                    <button className="otp-clear-btn" onClick={() => setPhoneOtp(["","","","","",""])}>Clear</button>
                   </div>
                 </div>
 
@@ -437,14 +430,17 @@ export default function ContactPage() {
                       />
                     ))}
                   </div>
+                  <div className="otp-bottom-row">
+                    <span className="otp-resend">
+                      {resendTimer > 0
+                        ? `Resend in 00:${String(resendTimer).padStart(2, "0")}`
+                        : <span className="otp-resend-link" onClick={handleResend}>Resend</span>
+                      }
+                    </span>
+                    <button className="otp-clear-btn" onClick={() => setEmailOtp(["","","","","",""])}>Clear</button>
+                  </div>
                 </div>
 
-                <p className="otp-resend">
-                  {resendTimer > 0
-                    ? `Resend in 00:${String(resendTimer).padStart(2, "0")}`
-                    : <span className="otp-resend-link" onClick={handleResend}>Resend Both Codes</span>
-                  }
-                </p>
                 <p className="otp-edit-link" onClick={() => { setStep("form"); setError(""); }}>
                   Wrong details? Edit Contact Info
                 </p>
@@ -475,7 +471,17 @@ export default function ContactPage() {
               <span className="success-pill">📧 Confirmation email sent</span>
               <span className="success-pill">📋 Request logged</span>
             </div>
-            <a href="/services" className="otp-submit-btn" style={{ display: "block", textDecoration: "none", marginTop: "20px" }}>
+            <div className="success-download-card">
+              <div className="success-download-icon">📄</div>
+              <div className="success-download-text">
+                <p className="success-download-title">Company Profile</p>
+                <p className="success-download-desc">Services, case studies & client results</p>
+              </div>
+              <a href="/downloads/company-profile.pdf" download className="success-download-btn">
+                Download
+              </a>
+            </div>
+            <a href="/services" className="otp-submit-btn" style={{ display: "block", textDecoration: "none", marginTop: "16px" }}>
               Explore Our Services
             </a>
             <a href="/" className="otp-cancel-btn" style={{ display: "block", textDecoration: "none" }}>
@@ -525,10 +531,10 @@ export default function ContactPage() {
         .contact-booking-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(to right, #F5A623, #C17F24); color: white; padding: 16px 36px; border-radius: 999px; font-size: 15px; font-weight: 700; text-decoration: none; transition: opacity 0.2s; }
         .contact-booking-btn:hover { opacity: 0.9; }
         .contact-booking-note { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 16px; }
-
-        /* OTP Modal */
         .otp-overlay { position: fixed; inset: 0; background: rgba(27,42,107,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 20px; backdrop-filter: blur(4px); }
-        .otp-modal { background: white; border-radius: 20px; padding: 32px 28px; width: 100%; max-width: 420px; box-shadow: 0 24px 64px rgba(0,0,0,0.15); }
+        .otp-modal { background: white; border-radius: 20px; padding: 32px 28px; width: 100%; max-width: 420px; box-shadow: 0 24px 64px rgba(0,0,0,0.15); position: relative; }
+        .otp-close-btn { position: absolute; top: 16px; right: 16px; width: 30px; height: 30px; border-radius: 50%; background: #F3F4F6; border: none; font-size: 14px; cursor: pointer; color: #6B7280; display: flex; align-items: center; justify-content: center; }
+        .otp-close-btn:hover { background: #E5E7EB; }
         .otp-modal-header { margin-bottom: 20px; }
         .otp-modal-title { font-size: 20px; font-weight: 800; color: #1B2A6B; margin-bottom: 6px; font-family: var(--font-playfair); }
         .otp-modal-sub { font-size: 13px; color: #6B7280; line-height: 1.6; }
@@ -546,10 +552,12 @@ export default function ContactPage() {
         .otp-box { width: 44px; height: 50px; border: 1.5px solid #E5E7EB; border-radius: 10px; text-align: center; font-size: 20px; font-weight: 700; color: #1B2A6B; background: #FAFAF8; outline: none; transition: border-color 0.2s; }
         .otp-box:focus { border-color: #F5A623; background: white; }
         .otp-box-filled { border-color: #F5A623; background: #FFF8EC; }
-        .otp-divider { border: none; border-top: 1px solid #F3F4F6; margin: 16px 0; }
-        .otp-resend { font-size: 12px; color: #9CA3AF; text-align: center; margin: 8px 0; }
+        .otp-bottom-row { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+        .otp-resend { font-size: 12px; color: #9CA3AF; }
         .otp-resend-link { color: #F5A623; font-weight: 600; cursor: pointer; }
-        .otp-edit-link { font-size: 12px; color: #6B7280; text-align: center; cursor: pointer; text-decoration: underline; margin-bottom: 16px; }
+        .otp-clear-btn { font-size: 11px; background: transparent; color: #F5A623; border: 1px solid #F5A623; padding: 3px 10px; border-radius: 999px; cursor: pointer; font-family: inherit; }
+        .otp-divider { border: none; border-top: 1px solid #F3F4F6; margin: 16px 0; }
+        .otp-edit-link { font-size: 12px; color: #6B7280; text-align: center; cursor: pointer; text-decoration: underline; margin-bottom: 16px; display: block; }
         .otp-error { font-size: 13px; color: #DC2626; background: #FEF2F2; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; }
         .otp-submit-btn { width: 100%; padding: 14px; background: linear-gradient(to right, #F5A623, #C17F24); color: white; border: none; border-radius: 999px; font-size: 15px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
         .otp-submit-btn:hover { opacity: 0.9; }
@@ -558,7 +566,12 @@ export default function ContactPage() {
         .success-icon-wrap { font-size: 48px; margin-bottom: 16px; }
         .success-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 16px 0; }
         .success-pill { background: #F0FDF4; color: #166534; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 500; }
-
+        .success-download-card { display: flex; align-items: center; gap: 12px; background: #FFF8EC; border: 1.5px solid #F5A623; border-radius: 12px; padding: 14px 16px; margin: 16px 0; text-align: left; }
+        .success-download-icon { font-size: 28px; flex-shrink: 0; }
+        .success-download-text { flex: 1; }
+        .success-download-title { font-size: 14px; font-weight: 700; color: #1B2A6B; margin-bottom: 2px; }
+        .success-download-desc { font-size: 12px; color: #9CA3AF; }
+        .success-download-btn { background: #1B2A6B; color: white; padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 700; text-decoration: none; white-space: nowrap; }
         @media (max-width: 1023px) {
           .contact-container { padding: 0 20px; }
           .contact-hero { padding: 100px 0 48px; }
